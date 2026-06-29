@@ -1,0 +1,634 @@
+/************** General style */
+:root {
+  --main-color: #cbfe1c;
+}
+
+/* Apply Days One font to all headings */
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Days One", sans-serif;
+}
+
+p,
+h5 {
+  font-family: "Chakra Petch", sans-serif;
+}
+
+.main-color {
+  color: var(--main-color);
+}
+
+section {
+  padding-block: 80px;
+}
+
+.bg-section-1 {
+  background-color: #0b0e13;
+}
+.bg-section-2 {
+  background-color: #0d131d;
+}
+
+.animation-sec::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+    to right,
+    transparent,
+    rgba(255, 255, 255, 0.5),
+    transparent
+  );
+  position: absolute;
+  left: 0;
+  transform: translateX(-100%);
+  transition: 0.5s all;
+  border-radius: 10px;
+}
+.animation-sec:hover:after {
+  transform: translateX(100%);
+}
+
+/* General style */
+
+/********************** Navbar ****************** */
+.navbar {
+  background-color: #0b0c10;
+  font-family: "Chakra Petch", sans-serif;
+  border-bottom: 2px solid #181e26;
+}
+
+/* Brand logo */
+.navbar-brand {
+  color: var(--main-color);
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+/* Nav links */
+.navbar-nav .nav-link {
+  color: #fff;
+  font-weight: 500;
+  margin: 0 10px;
+}
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: var(--main-color);
+}
+
+.navbar-brand:focus,
+.navbar-brand:hover {
+  color: var(--main-color);
+}
+/* Sign In button */
+.btn-signin {
+  background-color: var(--main-color);
+  color: #000;
+  font-weight: 600;
+  border-radius: 6px;
+  padding: 6px 18px;
+}
+.btn-signin:hover {
+  background-color: var(--main-color);
+}
+
+/* Right section */
+.right-section .nav-link {
+  color: #fff;
+  font-weight: 500;
+  padding-inline: 2px;
+}
+
+/* Mobile layout */
+@media (max-width: 991.98px) {
+  .right-section {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    border-top: 1px solid #1a1a1a;
+    padding-top: 0.5rem;
+  }
+  .right-section .nav-link,
+  .right-section .btn-signin {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 0.5rem;
+  }
+  .right-section .nav-link span {
+    display: inline;
+  }
+}
+
+/* Desktop layout */
+@media (min-width: 992px) {
+  .right-section {
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+  }
+  .right-section .nav-link span {
+    display: none;
+  }
+}
+
+/************************ heading*********** */
+
+.hero-section {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.9)), url(../images/hero-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.hero-section p {
+  font-size: 1rem;
+  margin: 20px 0 30px;
+  color: #ccc;
+}
+
+.btn-main {
+  background-color: var(--main-color);
+  color: #000;
+  font-weight: bold;
+  font-family: "Chakra Petch", sans-serif;
+}
+.btn-main:hover {
+  background-color: #a6ce18;
+}
+
+.btn-outline-main {
+  border: 2px solid var(--main-color);
+  color: var(--main-color);
+  font-weight: 600;
+  font-family: "Chakra Petch", sans-serif;
+}
+
+.btn-outline-main:hover {
+  background-color: var(--main-color);
+  color: #000;
+}
+
+.hero-img {
+  border: 3px solid var(--maincolor);
+  border-radius: 10px;
+}
+#Home .img-fluid {
+  width: 570px;
+  height: 385px;
+  border: 5px solid var(--main-color);
+}
+
+/* Badge styling */
+.player-badge {
+  bottom: -25px;
+  left: -25px;
+  background-color: #0b0e13;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  border: 2px solid #181e26;
+}
+
+.player-badge i {
+  color: var(--main-color);
+  font-size: 1.5rem;
+}
+
+/************************ headin*********** */
+/************** Our Game *************** */
+.heading h5 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--main-color);
+  gap: 10px;
+}
+
+/* Gradient lines */
+.heading h5::before,
+.heading h5::after {
+  content: "";
+  flex: 0 0 40px;
+  height: 4px;
+}
+
+.heading h5::before {
+  background-image: linear-gradient(to left, var(--main-color), transparent);
+}
+
+.heading h5::after {
+  background-image: linear-gradient(to right, var(--main-color), transparent);
+}
+
+/* Image styling */
+.game-img {
+  border-radius: 15px;
+}
+
+/* Arrow buttons */
+.btn-arrow {
+  background-color: transparent;
+  border: 2px solid #444;
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+}
+
+.btn-arrow:hover {
+  border-color: var(--main-color);
+  color: var(--main-color);
+}
+
+/* Main button */
+.btn-main {
+  background-color: transparent;
+  border: 2px solid var(--main-color);
+  color: var(--main-color);
+  font-weight: 600;
+  padding: 10px 25px;
+  border-radius: 6px;
+}
+
+.btn-main:hover {
+  background-color: var(--main-color);
+  color: #000;
+}
+
+@media screen and (max-width: 768px) {
+  /* Stack images vertically */
+  .carousel-item .row {
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+  }
+
+  /* Hide all but the first image on mobile */
+  .carousel-item .col-md-4:not(:first-child) {
+    display: none;
+  }
+
+  /* Optional: make the single image full width */
+  .carousel-item img {
+    max-width: 100%;
+  }
+
+  /* Wrap arrows and button differently on mobile */
+  .arrow-order {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  /* Arrows row */
+  .arrow-order .btn-arrow {
+    margin: auto;
+  }
+
+  /* Button full width below arrows */
+  .btn-main {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/************** Our Game *************** */
+/* ************ what we do***********/
+
+/* Service boxes */
+.service-box {
+  background-color: #1a1a1a;
+  border-radius: 15px;
+  min-height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #1e2939;
+}
+.service-box h5 {
+  font-family: "Days One", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: rgb(241, 241, 241);
+}
+
+/* Icons */
+.icon {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 2.5rem;
+  background-color: #1e2939;
+  color: var(--main-color);
+  border-radius: 10px;
+}
+
+/* Images inside boxes */
+.service-img {
+  max-height: 200px;
+  object-fit: contain;
+}
+
+/* Bottom shadow */
+.section-shadow {
+  background-color: var(--main-color);
+  height: 5px;
+  width: 50%;
+  margin: auto;
+  border-radius: 50%;
+  box-shadow: 20px 20px 40px var(--main-color);
+}
+
+/* secetion marquee row image moving animation */
+
+/* Section background */
+#logo-marquee {
+  background: radial-gradient(rgba(203, 254, 28, 0.2), transparent 40%);
+  overflow: hidden;
+  position: relative;
+}
+.marquee-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.marquee-row {
+  display: flex;
+  gap: 20px;
+  width: max-content;
+}
+
+.marquee-left {
+  animation: moveLeft 25s linear infinite;
+}
+
+.marquee-right {
+  animation: moveRight 25s linear infinite;
+}
+
+@keyframes moveLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes moveRight {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(50%);
+  }
+}
+
+/* Logo styling */
+.logo-img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.logo-img:hover {
+  transform: scale(1.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .logo-img {
+    width: 70px;
+    height: 70px;
+  }
+  .marquee-container {
+    gap: 20px;
+  }
+}
+
+/* ************ what we do***********/
+/* ************** Our Teams ************/
+.team-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.team-card img {
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+  filter: grayscale(100%);
+  transition: filter 0.5s ease; /* faster grayscale to color */
+}
+
+/* Gradient overlay setup */
+.team-card::before,
+.team-card::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -100%;
+  height: 100%;
+  transition: bottom 0.5s ease; /* reveal in 0.5s */
+  z-index: 1;
+  border-radius: 10px;
+}
+
+/* Use your main color */
+.team-card::before {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.4));
+}
+
+/* Hover effects */
+.team-card:hover::before,
+.team-card:hover::after {
+  bottom: 0;
+}
+
+.team-card:hover img {
+  filter: grayscale(0%);
+}
+
+.team-card .info {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  color: #fff;
+  z-index: 2;
+}
+
+/* Vertical badge styling */
+.vertical-badge {
+  position: absolute;
+  right: 30px;
+  bottom: 5px;
+  transform: translateY(-50%) rotate(90deg);
+  transform-origin: right center;
+  font-weight: 700;
+  color: var(--main-color);
+  font-family: "Chakra Petch", sans-serif;
+  padding: 4px 10px;
+  border-radius: 6px;
+  z-index: 2;
+  font-size: 18px;
+  text-transform: uppercase;
+  filter: grayscale(100%);
+}
+.team-card:hover .vertical-badge {
+  filter: grayscale(0%);
+}
+.team-card p {
+  color: var(--main-color);
+  filter: grayscale(100%);
+}
+.team-card:hover p {
+  filter: grayscale(0%);
+}
+/* ************** Our Teams ************/
+/* ************ COntact us ********** */
+
+.contact-box {
+  background-color: #141a2a;
+  border-radius: 10px;
+}
+.form-control:focus {
+  color: var(--bs-body-color);
+  background-color: #1c2235;
+  border-color: var(--main-color);
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem var(--main-color);
+}
+
+.form-select:focus {
+  border-color: var(--main-color);
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem var(--main-color);
+}
+
+.icon-circle {
+  width: 45px;
+  height: 45px;
+  background-color: var(--main-color);
+  color: #000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+.community-box {
+  background: linear-gradient(90deg, #cbfe1c, #00ff88);
+  border-radius: 10px;
+}
+
+.social-icons i {
+  width: 40px;
+  height: 40px;
+  margin-right: 15px;
+  color: var(--main-color); /* icon itself transparent */
+  background-color: #000; /* black circular background */
+  border-radius: 50%;
+  padding: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* Hover effect */
+.social-icons i:hover {
+  background-color: #111111b7;
+  color: #cbfe1c; /* main color accent */
+}
+
+.contact-form {
+  background-color: #141a2a;
+  border-radius: 10px;
+}
+
+.form-control,
+.form-select {
+  background-color: #1c2235;
+  border: none;
+  color: #fff;
+}
+
+.form-control::placeholder {
+  color: #364153;
+}
+
+.btn-main {
+  background-color: #cbfe1c;
+  color: #000;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-main:hover {
+  background-color: #a6d814;
+}
+
+.form-check-input:checked {
+  background-color: var(--main-color);
+  border-color: var(--main-color);
+}
+
+/* ************ COntact us ********** */
+/* ************ Footer ********** */
+.footer-section {
+  background-color: #0b0f1a;
+  color: #fff;
+}
+
+.text-main {
+  color: var(--main-color);
+}
+
+.footer-links a {
+  color: #aaa;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: var(--main-color);
+}
+
+.social-icons-f i {
+  margin-right: 12px;
+  color: #aaa;
+  cursor: pointer;
+}
+
+.social-icons-f i:hover {
+  color: var(--main-color);
+}
+
+hr {
+  border-color: #1c2235;
+}
+.links-p-t a {
+  color: #aaa;
+  transition: color 0.3s ease;
+}
+
+.links-p-t a:hover {
+  color: var(--main-color);
+}
+
+/* ************ Footer ********** */
